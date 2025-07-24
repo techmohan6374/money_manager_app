@@ -25,8 +25,79 @@ nav .center a:hover {
     color: grey;
 }
 
+nav .right {
+    display: flex;
+    gap: 10px;
+}
+
 nav .right .login__btn {
     background-color: transparent;
     color: var(--dark-color);
     font-weight: 500;
+}
+
+nav .toggle__btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+nav .toggle__btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.showMobileSideBar {
+    display: flex;
+}
+
+.hideMobileSideBar {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    #mobileNavBar {
+        display: none;
+    }
+
+    #desktopNavBar {
+        display: flex;
+    }
+
+    .showMobileSideBar {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    #desktopNavBar {
+        display: none;
+    }
+
+    #mobileNavBar {
+        display: flex;
+    }
+
+    .showMobileSideBar {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        width: 40%;
+        height: 100vh;
+        background-color: red;
+    }
 }

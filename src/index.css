@@ -13,9 +13,15 @@
   --secondary-light-color: #f0f0f2;
   --dark-color: black;
 }
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 a {
-  text-decoration: none;
+  all:unset;
+  cursor: pointer;
 }
 
 .btn__primary {
@@ -26,6 +32,10 @@ a {
   color: var(--secondary-color);
   padding: 10px 15px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 .btn__primary:hover {
